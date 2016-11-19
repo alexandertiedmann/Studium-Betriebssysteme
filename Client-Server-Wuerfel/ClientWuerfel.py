@@ -6,7 +6,7 @@
 from socket import *
 
 # Definition der Socket-Parameter
-host = "141.45.209.57" # IP-Adresse des Servers
+host = "127.0.0.1" # IP-Adresse des Servers
 port = 4711 # Port-Adresse des Servers
 addr = (host,port)
 buf = 128 # Max. Speicher fuer Eingangsdaten

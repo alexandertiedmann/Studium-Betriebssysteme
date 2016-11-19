@@ -5,19 +5,18 @@
 from random import randint
 from socket import *
 
-k = [0] * 6
-
 def wuerfel():
 	augenzahl = randint(1, 6)
 	return augenzahl
 
 def wurf(anzahl):
-	global k
+	k = [0] * 6
 	for x in range(anzahl):
-		k[wuerfel()-1]+=1
+		zahl = wuerfel()
+		k[zahl-1]=k[zahl-1]+1
 	return k
 
-addr = ("141.45.209.57",4711) # Server-Adresse
+addr = ("127.0.0.1",4711) # Server-Adresse
 buf = 128 # Max. Speicher fuer Eingangsdaten
 
 UDPSock = socket(AF_INET, SOCK_DGRAM)
